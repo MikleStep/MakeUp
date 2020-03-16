@@ -1,0 +1,148 @@
+.about
+  margin-bottom: 100px
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    &--left
+       width: 50%
+    &--text
+      font-size: 1.6rem
+      line-height: 3rem
+      color: $black
+      font-family: $SFRegular
+      padding-right: 120px
+  &__social
+    content: ''
+    position: absolute
+    bottom: -20px
+    display: flex
+    margin-top: -20px
+    &--icon
+      img
+        width: 20px
+        height: 20px
+    &--inst
+      margin-right: 25px
+  &__slider
+    width: 50%
+    background-color: $white
+    position: relative
+    &--item
+      width: 100%
+      max-height: 480px
+      .slick-track
+        display: flex !important
+      .slick-slide 
+        width: auto
+    &--controls
+      position: absolute
+      content: ''
+      background-color: $white
+      left: 0
+      bottom: -30px
+      display: flex
+      align-items: center
+      min-width: 200px
+    .slick-arrow
+      order: 0
+      width: 90px
+      height: 60px
+      background-color: #5A516A
+      border: none
+      display: flex
+      align-items: center
+      background-repeat: no-repeat
+      cursor: pointer
+      
+      i
+        display: block
+        width: 15px
+        height: 15px
+        background-image: url('../img/icon/slider_icon--white.png')
+      &.arrow__icon--prev
+        justify-content: flex-end
+        padding-right: 25px
+      &.arrow__icon--next
+        background-color: #685F78
+        padding-left: 25px
+        margin-right: 25px
+        i
+          transform: rotate(180deg)
+    &--border
+      order: 1
+      width: 50px
+      height: 1px
+      background-color: $black
+      margin-right: 25px
+    &--counter
+      order: 2
+      font-size: 30px
+      line-height: 1.1
+      font-family: $centuryRegular
+      color: $black
+  &__bg
+    content: ''
+    position: absolute
+    right: 0
+    top: -125px
+    z-index: -1
+    width: 50%
+    height: 100%
+    background: url(../img/background/about_bg--dots.png)
+    background-size: cover
+    background-position: left
+  
+
+@media screen and (max-width: 1520px)
+  .about
+    &__bg
+      top: -115px
+  
+@media screen and (max-width: 1420px)
+  .about
+    &__bg
+      top: -105px
+
+@media screen and (max-width: 1340px)
+  .about
+    &__bg
+      width: 51%
+      top: -95px
+
+@media screen and (max-width: 1200px)
+  .about
+    &__bg
+      top: -85px
+      width: 52%
+    &__content--text
+      padding-right: 80px
+
+@media screen and (max-width: 1100px)
+  .about
+    &__bg
+      top: -75px
+      width: 53%
+    &__content--text
+      padding-right: 50px
+    &__name
+      margin-bottom: 20px
+@media screen and (max-width: 1000px)
+  .about
+    &__bg
+      top: -65px
+      width: 54%
+    &__content
+      flex-direction: column
+      &--left
+        width: 100%
+        margin-bottom: 100px
+        margin-top: 20px
+        position: relative
+      &--text
+        padding: 0
+    &__social
+      bottom: -50px
+    &__slider
+        width: 100%

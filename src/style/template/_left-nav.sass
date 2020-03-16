@@ -1,0 +1,16 @@
+.left-nav
+  min-height: 100%
+  max-width: 60px
+  margin-right: 96px
+  display: flex
+  justify-content: center
+  position: relative
+  &__line
+    display: block
+    height: 100%
+    width: 1px
+    background-color: $black
+    z-index: -1
+@media screen and (max-width: 768px)
+  .left-nav
+    display: none

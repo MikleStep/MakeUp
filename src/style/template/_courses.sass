@@ -1,0 +1,58 @@
+.courses
+  &__name
+    margin-bottom: 90px
+  &__list
+    display: flex
+  &__item
+    width: 33%
+    min-height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    
+    &--name
+      display: inline-block
+      position: relative
+      font-size: 3rem
+      font-family: $centuryRegular
+      line-height: 1.1
+      color: $black
+      margin-bottom: 50px
+      p
+        position: relative
+        display: inline-block
+        white-space: nowrap
+        &::after
+          content: ''
+          position: absolute
+          height: 1px
+          width: 100%
+          bottom: -5px
+          left: 0
+          background-color: $red
+    &--description
+      font-size: 1.6rem
+      font-family: $SFRegular
+      line-height: 3rem
+      color: $black
+      margin-bottom: 50px
+      padding-right: 35px
+    &--button
+      display: inline-block
+      position: relative
+      font-size: 1.6rem
+      font-family: $SFRegular
+      line-height: 3rem
+      color: $red
+      margin-top: auto
+      p
+        position: relative
+        display: inline-block
+        &::after
+          content: ''
+          position: absolute
+          height: 1px
+          width: 100%
+          bottom: 3px
+          left: 0
+          background-color: $red

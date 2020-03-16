@@ -1,0 +1,90 @@
+.footer
+  background-color: $black
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 25px
+  padding-top: 50px
+  padding-bottom: 50px
+  padding-left: 25px
+  padding-right: 25px
+  &__logo
+    width: 182px
+    height: 36px
+    margin-bottom: 50px
+  &__nav
+    display: flex
+    margin-bottom: 50px
+    list-style: none
+    &--item
+      margin-right: 74px
+      &:last-child
+        margin-right: 0
+    &--link
+      text-decoration: none
+      color: $white
+      font-family: $SFMedium
+      font-size: 1.6rem
+  &__form
+    margin-bottom: 50px
+    display: flex
+    align-items: flex-end
+    &--group
+      display: flex
+      align-items: flex-end
+      position: relative
+      margin-right: 25px
+    label 
+      position: absolute
+      top: -10px
+      left: 0px
+      font-size: 1.2rem
+      font-family: $SFRegular
+      color: $white
+      opacity: 1 
+      transform: translateY(0)
+      transition: all 0.2s ease-out
+    input:placeholder-shown + label 
+      opacity: 0
+      transform: translateY(1rem)
+    &--input
+      position: relative
+      width: 100%
+      height: 33px
+      padding-top: 18px
+      padding-right: 50px
+      padding-bottom: 18px
+      background: none
+      box-shadow: none
+      border: none
+      border-bottom: 1px solid #EFEFEF
+      font-family: $SFRegular
+      font-size: 1.6rem
+      color: $white
+      outline: none
+      background-repeat: no-repeat;
+      background-position: right 2rem center;
+      background-size: 1.75rem;
+      &::-webkit-input-placeholder
+        color: $white
+    &--button
+      border: none
+      text-align: center
+      padding-top: 14px
+      padding-bottom: 14px
+      padding-left: 25px
+      padding-right: 25px
+      margin-top: 19px
+      background-color: #E86556
+      color: $white
+      font-size: 1.6rem
+      font-family: $SFMedium
+      cursor: pointer
+      outline: none
+      transition: all 0.2s ease-out
+  &__copyright
+    font-size: 1.6rem
+    font-family: $SFRegular
+    color: $white
+    opacity: 0.5
+      

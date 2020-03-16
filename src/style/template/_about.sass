@@ -39,6 +39,7 @@
       .slick-slide 
         width: auto
     &--controls
+      width: 100%
       position: absolute
       content: ''
       background-color: $white
@@ -80,7 +81,7 @@
       margin-right: 25px
     &--counter
       order: 2
-      font-size: 30px
+      font-size: 3rem
       line-height: 1.1
       font-family: $centuryRegular
       color: $black
@@ -148,3 +149,18 @@
       bottom: -50px
     &__slider
         width: 100%
+@media screen and (max-width: 450px)
+  .about__slider
+    &--border
+      width: 30px
+    &--counter
+      font-size: 2.8rem
+@media screen and (max-width: 380px)
+  .about__slider
+    .slick-arrow.arrow__icon--next
+      margin-right: 15px
+    &--counter
+      font-size: 2.4rem
+    &--border
+      width: 20px
+      margin-right: 15px

@@ -1,19 +1,25 @@
 export const init = () => {
-  $('.reviews__slider').slick({
-    slidesToShow: 2,
+  $('.courses__list').slick({
+    slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
     infinite: true,
     speed: 500,
-    arrow: true,
+    arrow: false,
     cssEase: 'linear',
     responsive: [{
-      breakpoint: 920,
+      breakpoint: 1500,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrow: true,
+      }
+    },
+    {
+      breakpoint: 800,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000
       }
     }]
   });

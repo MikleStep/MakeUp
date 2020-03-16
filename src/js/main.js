@@ -2,12 +2,13 @@ import {init as popupInit} from './popup.js';
 import {init as annoucmentInit} from './annoucment.js';
 import {init as aboutInit} from './about.js';
 import {init as reviewsInit} from './reviews.js';
-import {init as headerinit} from './header.js';
+import {init as coursesinit} from './courses.js';
 
 $(document).ready(function() {
   popupInit();
   annoucmentInit();
   aboutInit();
+  coursesinit();
   reviewsInit();
   headerinit();
 });

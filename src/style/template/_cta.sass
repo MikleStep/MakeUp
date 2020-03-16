@@ -3,15 +3,17 @@
   width: 100%
   height: 300px
   background-image: url('../img/background/cta_bg.png')
+  background-repeat: no-repeat
+  background-size: cover
   padding: 25px
   margin-bottom: 123px
   &__bg
     content: ''
     position: absolute
     background-image: url('../img/background/about_bg--dots.png')
-    background-size: contain
-    background-repeat: no-repeat;
-    height: calc(100% + 35px);
+    background-size: cover
+    background-repeat: no-repeat
+    height: calc(100% + 35px)
     width: 50%;
     top: -15px;
     left: 7px;
@@ -27,6 +29,7 @@
     flex-direction: column
     justify-content: space-between
     align-items: center
+    text-align: center
   &__title
     font-size: 3rem
     font-family: $centuryRegular
@@ -49,3 +52,15 @@
     padding-right: 25px
     cursor: pointer
     
+@media screen and (max-width: 670px)
+  .cta
+    height: 330px
+@media screen and (max-width: 540px)
+  .cta
+    height: 346px
+@media screen and (max-width: 522px)
+  .cta
+    height: 368px
+@media screen and (max-width: 372px)
+  .cta
+    height: 375px

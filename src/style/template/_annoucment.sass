@@ -127,7 +127,7 @@
       justify-content: flex-end
       background-image: url(../img/background/annoucment_mobile.png)
       background-repeat: no-repeat
-      background-position-x: right
+      background-position-x: left
       background-size: cover
       width: 100%
       height: calc(100vh - 95px)
@@ -204,15 +204,38 @@
         font-size: 6rem
         left: 45px
         letter-spacing: 1.5rem
-@media screen and (max-width: 530px)
+@media screen and (max-width: 650px)
   .annoucment__mobile
     .annoucment
       &__title
         font-size: 5rem
         left: 40px
-@media screen and (max-width: 480px)
+@media screen and (max-width: 570px)
   .annoucment__mobile
     .annoucment
       &__title
-        letter-spacing: 1.5rem
-        left: 40px
+        left: 30px
+@media screen and (max-width: 530px)
+  .annoucment__mobile
+    .annoucment
+      &__title
+        left: 10px
+    &--bg
+      background-position-x: -20px;
+@media screen and (max-width: 500px)
+  .annoucment__mobile
+    .annoucment
+      &__title
+        font-size: 4rem
+        letter-spacing: 1rem
+        left: -5px
+        &--black
+          color: $black
+@media screen and (max-width: 500px)
+  .annoucment__mobile
+    .annoucment
+      &__title
+        letter-spacing: 0.9rem
+        left: 2px
+
+          

@@ -204,5 +204,13 @@
   .header__wrapper
     padding: 0 50px
 @media screen and (max-width: 425px)
-  .header__wrapper
-    padding: 0 20px
+  .header
+    &__wrapper
+      padding: 0 20px
+@media screen and (max-width: 375px)
+  .header
+    &__logo
+      &--border
+        width: 20px
+      &--item svg
+       width: 130px

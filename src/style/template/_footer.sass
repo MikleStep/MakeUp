@@ -9,9 +9,14 @@
   padding-left: 25px
   padding-right: 25px
   &__logo
-    width: 182px
-    height: 36px
     margin-bottom: 50px
+    &--link
+      text-decoration: none
+      h1
+        font-size: 3rem
+        font-family: $bebasneueBold
+        color: $white
+        letter-spacing: 0.5rem
   &__nav
     display: flex
     margin-bottom: 50px
@@ -88,7 +93,7 @@
     color: $white
     opacity: 0.5
       
-@media screen and (max-width: 425px)
+@media screen and (max-width: 725px)
   .footer
     &__nav
       display: none

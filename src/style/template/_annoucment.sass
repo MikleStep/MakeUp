@@ -226,16 +226,19 @@
   .annoucment__mobile
     .annoucment
       &__title
+        position: relative
         font-size: 4rem
         letter-spacing: 1rem
         left: -5px
-        &--black
-          color: $black
-@media screen and (max-width: 500px)
+        
+@media screen and (max-width: 425px)
   .annoucment__mobile
-    .annoucment
-      &__title
-        letter-spacing: 0.9rem
-        left: 2px
+    &--bg
+      background-image: url(../img/background/test.png)
+      display: block
+    .annoucment__title
+      color: $white
+      left: 10px
+
 
           

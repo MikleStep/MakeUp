@@ -14,9 +14,9 @@
     background-size: cover
     background-repeat: no-repeat
     height: calc(100% + 35px)
-    width: 50%;
-    top: -15px;
-    left: 7px;
+    width: 50%
+    top: -15px
+    left: 7px
     z-index: -1
     
   &__wrapper
@@ -42,6 +42,7 @@
     color: $black
     margin-bottom: 30px
   &__btn
+    position: relative
     background-color: #5A516A
     font-size: 1.6rem
     font-family: $CenturyMedium
@@ -52,6 +53,26 @@
     padding-left: 25px
     padding-right: 25px
     cursor: pointer
+    transition: 0.3s
+    &:after 
+      content: ""
+      position: absolute
+      width: calc(100% - 1px)
+      height: calc(100% - 1px)
+      left: -1px
+      top: -1px
+      border: 1px solid #5A516A
+      transition: 0.3s
+    &:hover:after 
+      top: -10px
+      left: 10px
+      transition: 0.3s
+    &:active
+      background-color: #4b4458
+      transition: 0.1s
+      &:after 
+        border-color: #4b4458
+        transition: 0.1s
     
 @media screen and (max-width: 670px)
   .cta

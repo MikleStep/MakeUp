@@ -27,6 +27,25 @@
     &--item
       display: flex
       margin-right: 74px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        width: 0%
+        bottom: -2px
+        left: 0
+        height: 2px
+        background-color: $black
+        transition: 0.3s
+      &:hover:after
+        width: 100%
+        transition: 0.3s
+      &:active
+        color: #0f0f0f
+        transition: 0.1s
+        &:after
+          background-color: #0f0f0f
+          transition: 0.1s
     &--link
       color: $black
       text-decoration: none
@@ -53,6 +72,7 @@
       line-height: 1.2
       letter-spacing: 2px
       white-space: nowrap
+      transition: .2s
       &::after
         position: absolute
         content: ''
@@ -61,6 +81,23 @@
         background-color: $red
         bottom: 0px
         left: 0
+        transition: .2s
+    &:hover
+      p
+        color: #d35c4e
+        transition: .2s
+        &:after
+          bottom: -5px
+          transition: .2s
+          background-color: #d35c4e
+    &:active
+      p
+        color: #be4f42
+        transition: .1s
+      &:after
+          transition: .1s
+          background-color: #be4f42
+        
   &__phone
     display: none
     .nav-bar 
@@ -72,6 +109,8 @@
       background: transparent
       z-index: 2
     .nav-bar ul 
+      display: flex
+      flex-direction: column
       list-style: none
       background-color: $white
       width: 100%
@@ -112,10 +151,31 @@
       transform: translateY(-11px) translateX(0) rotate(-45deg)
       background: $black
     &--item 
+      position: relative
+      width: fit-content
       margin-bottom: 20px
-      transition-delay: 2s 
+      transition-delay: 2s
+      &:after
+        content: ''
+        position: absolute
+        width: 0%
+        bottom: -5px
+        left: 0
+        height: 2px
+        background-color: $black
+        transition: 0.3s
+      &:hover:after
+        width: 100%
+        transition: 0.3s
+      &:active
+        color: #0f0f0f
+        transition: 0.1s
+        &:after
+          background-color: #0f0f0f
+          transition: 0.1s 
     &--link 
-      font-family: $CenturyRegular
+      font-family: $CenturyMedium
+      font-weight: 700
       color: $black
       text-decoration: none
       font-size: 1.8rem
@@ -132,6 +192,7 @@
       line-height: 1.2
       letter-spacing: 2px
       white-space: nowrap
+      cursor: pointer
       & p::after 
         position: absolute
         content: ''
@@ -140,6 +201,21 @@
         background-color: $red
         bottom: 0px
         left: 0  
+      &:hover
+        p
+          color: #d35c4e
+          transition: .2s
+          &:after
+            bottom: -5px
+            transition: .2s
+            background-color: #d35c4e
+      &:active
+        p
+          color: #be4f42
+          transition: .1s
+        &:after
+            transition: .1s
+            background-color: #be4f42
     
 
 @media screen and (max-width: 1560px)

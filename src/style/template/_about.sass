@@ -22,9 +22,13 @@
     display: flex
     align-items: center
     &--icon
+      transition: 0.3s
       img
         width: 20px
         height: 20px
+      &:hover
+        transform: scale(1.2) rotate(-15deg)
+        transition: 0.3s
     &--inst
       margin-right: 25px
   &__slider
@@ -58,21 +62,36 @@
       align-items: center
       background-repeat: no-repeat
       cursor: pointer
-      
+      transition: 0.2s
+      &:hover
+        background-color: #4e475c
+        transition: 0.2s
+      &:active
+        background-color: #443e50
+        transition: 0.1s
       i
         display: block
         width: 15px
         height: 15px
         background-image: url('../img/icon/slider_icon--white.png')
+        transition: 0.2s
+        
       &.arrow__icon--prev
         justify-content: flex-end
         padding-right: 25px
+        
       &.arrow__icon--next
         background-color: #685F78
         padding-left: 25px
         margin-right: 25px
         i
           transform: rotate(180deg)
+      &.arrow__icon--prev:active i
+        transform: scale(1.1) translateX(-2px)
+        transition: 0.2s
+      &.arrow__icon--next:active i
+        transform: scale(1.1) rotate(180deg) translateX(-2px)
+        transition: 0.2s
     &--border
       order: 1
       width: 50px
@@ -129,6 +148,7 @@
       width: 53%
     &__content--text
       padding-right: 50px
+      margin-bottom: 20px
     &__name
       margin-bottom: 20px
 @media screen and (max-width: 1000px)

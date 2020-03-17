@@ -24,8 +24,27 @@
     list-style: none
     &--item
       margin-right: 74px
+      position: relative
       &:last-child
         margin-right: 0
+      &:after
+        content: ''
+        position: absolute
+        width: 0%
+        bottom: -7px
+        left: 0
+        height: 2px
+        background-color: $white
+        transition: 0.3s
+      &:hover:after
+        width: 100%
+        transition: 0.3s
+      &:active
+        color: #e4e3e3
+        transition: 0.1s
+        &:after
+          background-color: #e4e3e3
+          transition: 0.1s
     &--link
       text-decoration: none
       color: $white
@@ -90,6 +109,12 @@
       cursor: pointer
       outline: none
       transition: all 0.2s ease-out
+      &:hover
+        background-color: #f66b5c
+        transition: all 0.2s ease-out
+      &:active
+        background-color: #d65c4f
+        transition: all 0.1s ease-out
   &__copyright
     font-size: 1.6rem
     font-family: $CenturyRegular

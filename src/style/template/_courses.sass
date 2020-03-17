@@ -40,12 +40,24 @@
       padding-right: 35px
     &--button
       display: inline-block
-      position: relative
+      position: absolute
+      content: ''
+      bottom: 0
       font-size: 1.6rem
       font-family: $CenturyRegular
       line-height: 3rem
       color: $red
-      margin-top: auto
+      cursor: pointer
+      &:hover
+        p:after
+          bottom: 0
+          transition: 0.2s
+      &:active
+        p
+          color: #ca5244
+          &:after
+            bottom: 0
+            transition: 0.2s
       p
         position: relative
         display: inline-block
@@ -57,6 +69,9 @@
           bottom: 3px
           left: 0
           background-color: $red
+          transition: 0.2s
+  .slick-track
+    height: 310px
   .slick-arrow
     width: 15px;
     height: 15px;
@@ -76,3 +91,16 @@
 @media screen and (max-width: 800px)
   .courses__item
     margin-right: 0
+  .courses__item--description
+    margin-bottom: 0
+  .courses 
+    .slick-track
+      height: 210px
+@media screen and (max-width: 520px)
+  .courses 
+    .slick-track
+      height: 250px
+@media screen and (max-width: 375px)
+  .courses 
+    .slick-track
+      height: 280px

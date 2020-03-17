@@ -23,6 +23,7 @@
       font-family: $CenturyMedium
       font-weight: 700
       color: $black
+      margin-bottom: 10px
     &--date
       font-size: 1.6rem
       font-family: $CenturyRegular
@@ -36,17 +37,25 @@
     .slick-arrow
       width: 15px
       height: 15px
+      z-index: 2
       top: calc(50% - 15px)
       background-color: #fff
       border: none
       background-image: url(../img/icon/slider_icon.svg)
       background-repeat: no-repeat
       cursor: pointer
+      transition: 0.1s
       &::before
         display: none
+      &:active
+        transform: scale(1.1) translateX(-2px)
+        transition: 0.1s
     .slick-next
       transform: rotate(180deg)
       top: calc(50% - 30px)
+      &:active
+        transform: scale(1.1) rotate(180deg) translateX(-2px)
+        transition: 0.1s
 
 @media screen and (max-width: 460px)
   .reviews__slider 

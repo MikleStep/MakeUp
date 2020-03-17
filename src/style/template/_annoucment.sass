@@ -60,10 +60,19 @@
       background-image: url('../img/icon/slider_icon.svg')
       background-repeat: no-repeat
       cursor: pointer
+      outline: none
+      transition: 0.1s
       &.arrow__icon--prev
         margin-right: 50px
+        &:active
+          transform: scale(1.1) translateX(-2px)
+          transition: 0.1s
       &.arrow__icon--next
-        transform: rotate(180deg)
+        transform: rotate(180deg) 
+        &:active
+          transform: scale(1.1) rotate(180deg) translateX(-2px)
+          transition: 0.1s
+
   &__title
     content: ''
     position: absolute

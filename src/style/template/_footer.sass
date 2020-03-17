@@ -29,7 +29,8 @@
     &--link
       text-decoration: none
       color: $white
-      font-family: $SFMedium
+      font-family: $CenturyMedium
+      font-weight: 700
       font-size: 1.6rem
   &__form
     margin-bottom: 50px
@@ -45,7 +46,7 @@
       top: -10px
       left: 0px
       font-size: 1.2rem
-      font-family: $SFRegular
+      font-family: $CenturyRegular
       color: $white
       opacity: 1 
       transform: translateY(0)
@@ -64,7 +65,7 @@
       box-shadow: none
       border: none
       border-bottom: 1px solid #EFEFEF
-      font-family: $SFRegular
+      font-family: $CenturyRegular
       font-size: 1.6rem
       color: $white
       outline: none
@@ -84,13 +85,14 @@
       background-color: #E86556
       color: $white
       font-size: 1.6rem
-      font-family: $SFMedium
+      font-family: $CenturyMedium
+      font-weight: 700
       cursor: pointer
       outline: none
       transition: all 0.2s ease-out
   &__copyright
     font-size: 1.6rem
-    font-family: $SFRegular
+    font-family: $CenturyRegular
     color: $white
     opacity: 0.5
       
@@ -120,13 +122,14 @@
         margin-right: 0
         margin-bottom: 30px
 
-@media screen and (max-width: 680px)
+@media screen and (max-width: 520px)
   .footer__form--button
     padding-top: 10px
     padding-bottom: 10px
     padding-left: 12px
     padding-right: 12px
     font-size: 1.4rem
+    width: 100%
   
 @media screen and (max-width: 450px)
   .footer
@@ -141,3 +144,9 @@
       order: 1
       width: 100%
       padding: 0
+      &--button
+        width: auto
+        padding-top: 14px
+        padding-bottom: 14px
+        padding-left: 25px
+        padding-right: 25px

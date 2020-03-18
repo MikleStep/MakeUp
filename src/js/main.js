@@ -3,13 +3,12 @@ import {init as annoucmentInit} from './annoucment.js';
 import {init as aboutInit} from './about.js';
 import {init as reviewsInit} from './reviews.js';
 import {init as coursesinit} from './courses.js';
-
 $(document).ready(function() {
   popupInit();
   annoucmentInit();
   aboutInit();
-  coursesinit();
   reviewsInit();
+  coursesinit();
 });
 
 
@@ -34,15 +33,15 @@ $(document).ready(function () {
   };
   var effect = 'slide';
   var duration = 400;
-  $(".btn").click(function () {
-    $(".nav-bar").toggle(effect, options, duration);
-    $('.btn').toggleClass("active");
+  $(".header__phone--btn").click(function () {
+    $(".header__phone--nav-bar").toggle(effect, options, duration);
+    $('.header__phone--btn').toggleClass("active");
   });
 
   $(document).scroll(function () {
     if ($(this).scrollTop() > 300) {
-      $(".nav-bar").hide(effect, options, duration);
-      $('.btn').removeClass("active");
+      $(".header__phone--nav-bar").hide(effect, options, duration);
+      $('.header__phone--btn').removeClass("active");
     }
   });
 });

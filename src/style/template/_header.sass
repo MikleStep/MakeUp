@@ -24,7 +24,7 @@
     list-style: none
     margin: 0
     padding: 0
-    &--item
+    li
       display: flex
       margin-right: 74px
       position: relative
@@ -46,14 +46,14 @@
         &:after
           background-color: #0f0f0f
           transition: 0.1s
-    &--link
-      color: $black
-      text-decoration: none
-      font-family: $CenturyMedium
-      font-weight: 700
-      font-size: 1.6rem
-      line-height: 2.5rem
-      white-space: nowrap
+      a
+        color: $black
+        text-decoration: none
+        font-family: $CenturyMedium
+        font-weight: 700
+        font-size: 1.6rem
+        line-height: 2.5rem
+        white-space: nowrap
     &--item:last-child
       margin-right: 0
   &__button
@@ -100,7 +100,7 @@
         
   &__phone
     display: none
-    .nav-bar 
+    &--nav-bar 
       width: 25%
       height: 100vh
       top: 94px
@@ -108,7 +108,7 @@
       position: absolute
       background: transparent
       z-index: 2
-    .nav-bar ul 
+    &--nav-bar ul 
       display: flex
       flex-direction: column
       list-style: none
@@ -118,7 +118,15 @@
       max-height: 500px
       padding: 35px
       padding-top: 30px
-    .btn 
+      a 
+        font-family: $CenturyMedium
+        font-weight: 700
+        color: $black
+        text-decoration: none
+        font-size: 1.8rem
+        line-height: 2.5rem
+        white-space: nowrap 
+    &--btn 
       position: absolute
       top: 35px
       right: 70px
@@ -127,7 +135,7 @@
       cursor: pointer
       z-index: 100
       transition: opacity .25s ease
-    .btn span 
+    &--btn span 
       background: $black
       border: none
       height: 2px
@@ -137,17 +145,17 @@
       left: 0
       transition: all .35s ease
       cursor: pointer
-    .btn .middle 
+    &--btn .middle 
       top: 11px
-    .btn .bottom 
+    &--btn .bottom 
       top: 23px
-    .btn.active .top 
+    &--btn.active .top 
       transform: translateY(11px) translateX(0) rotate(45deg)
       background: $black
-    .btn.active .middle 
+    &--btn.active .middle 
       opacity: 0
       background: $black
-    .btn.active .bottom 
+    &--btn.active .bottom 
       transform: translateY(-11px) translateX(0) rotate(-45deg)
       background: $black
     &--item 
@@ -173,14 +181,7 @@
         &:after
           background-color: #0f0f0f
           transition: 0.1s 
-    &--link 
-      font-family: $CenturyMedium
-      font-weight: 700
-      color: $black
-      text-decoration: none
-      font-size: 1.8rem
-      line-height: 2.5rem
-      white-space: nowrap 
+    
     &--button 
       display: inline-block
       margin-top: 70px
@@ -222,7 +223,7 @@
   .header
     &__button
       margin-right: 85px
-    &__nav--item
+    &__nav li
       margin-right: 54px
 @media screen and (max-width: 1400px)
   .header
@@ -233,7 +234,7 @@
           width: 45px
     &__button
       margin-right: 45px
-    &__nav--item
+    &__nav li
       margin-right: 45px
 @media screen and (max-width: 1280px)
   .header
@@ -260,20 +261,21 @@
     &__wrapper
       padding: 0 50px
     &__phone
-      .btn, .nav-bar
+      &--btn
         right: 49px
-      .nav-bar
+      &--nav-bar
+        right: 49px
         width: 35%
 
 @media screen and (max-width: 650px)
   .header
     &__phone
-      .nav-bar
+      &--nav-bar
         width: 40%
 @media screen and (max-width: 560px)
   .header
     &__phone
-      .nav-bar
+      &--nav-bar
         width: 50%
 
 @media screen and (max-width: 425px)
@@ -281,9 +283,10 @@
     &__wrapper
       padding: 0 20px
     &__phone
-      .btn, .nav-bar
+      &--btn
         right: 19px
-      .nav-bar
+      &--nav-bar
+        right: 19px
         width: 60%
 @media screen and (max-width: 375px)
   .header
@@ -293,5 +296,5 @@
       &--item svg
        width: 130px
     &__phone
-      .nav-bar
+      &--nav-bar
         width: 80%

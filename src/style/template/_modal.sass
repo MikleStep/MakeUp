@@ -1,0 +1,116 @@
+.modal
+  display: none
+  &-dialog
+    max-width: 900px
+  &__container
+    position: fixed
+    display: flex
+    align-items: center
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    -webkit-perspective: 600px
+    perspective: 600px
+    z-index: 1001
+    visibility: hidden
+    overflow: hidden
+  &-content
+    margin-top: 0
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    min-height: 350px
+    background-color: $white
+    text-align: left
+    border-radius: 2px
+    flex-direction: column
+    width: 100%
+    -ms-flex-negative: 0
+    flex-shrink: 0
+    padding-top: 50px
+    padding-right: 50px
+    padding-left: 50px
+    padding-bottom: 50px
+    overflow: hidden
+  &__close
+    display: block
+    position: absolute
+    width: 25px
+    height: 25px
+    line-height: 30px
+    color: #818181
+    cursor: pointer
+    right: 50px
+    top: 50px
+    font-size: 28px
+    padding: 0
+    z-index: 2
+  &__name
+    display: inline-block
+    position: relative
+    font-size: 3rem
+    font-family: $centuryRegular
+    line-height: 1.1
+    color: $black
+    margin-bottom: 50px
+    p
+      position: relative
+      display: inline-block
+      white-space: nowrap
+      &::after
+        content: ''
+        position: absolute
+        height: 1px
+        width: 100%
+        bottom: -5px
+        left: 0
+        background-color: $red
+  &__description
+    max-width: 800px
+    font-size: 1.6rem
+    font-family: $CenturyRegular
+    line-height: 3rem
+    color: $black
+    margin-bottom: 50px
+    p
+      margin-bottom: 15px
+    ol
+      padding-left: 30px
+  &__button
+    border: none
+    text-align: center
+    padding-top: 14px
+    padding-bottom: 14px
+    padding-left: 25px
+    padding-right: 25px
+    background-color: #E86556
+    color: $white
+    font-size: 1.6rem
+    font-family: $CenturyMedium
+    font-weight: 700
+    cursor: pointer
+    outline: none
+    transition: all 0.2s ease-out
+    max-width: 400px
+    &--wrapper
+      width: 100%
+      display: flex
+      justify-content: center
+    &:hover
+      background-color: #f66b5c
+      text-decoration: none
+      color: $white
+      transition: all 0.2s ease-out
+    &:active
+      background-color: #d65c4f
+      transition: all 0.1s ease-out
+  .formats__table
+    margin-bottom: 50px
+
+@media screen and (max-width: 950px)
+  .modal-content
+    padding-top: 80px
+  .modal__close
+    top: 30px
+    right: 35px

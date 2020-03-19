@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style/main.css" />
     <title>Cool makeup</title>
   </head>
@@ -216,7 +218,7 @@
                 Курс «Макияж для себя» разработан для женщин, которые не умеют делать макияж, но хотят научиться. И не важно,
                 вам 16 или 56 Занятия проходят в группах до 5 человек. Курс включает 4 занятия.
               </div>
-              <div class="courses__item--button">
+              <div class="courses__item--button" data-toggle="modal" data-target="#modal-yourself">
                 <p>УЗНАТЬ ПОДРОБНЕЕ</p>
               </div>
             </div>
@@ -228,7 +230,7 @@
                 В рамках «Макияжных марафонов» участники учатся создавать несколько
                 макияжей по программе марафона адаптируя их под свою внешность.
               </div>
-              <div class="courses__item--button">
+              <div class="courses__item--button" data-toggle="modal" data-target="#modal-marathon">
                <p>УЗНАТЬ ПОДРОБНЕЕ</p>
               </div>
             </div>
@@ -240,7 +242,7 @@
                 Длительность мастер класса 2,5-3 часа. В течении 1,5-2 часов я создам
                 макияж на лице модели, комментируя каждый этап и косметический продукт.
               </div>
-              <div class="courses__item--button">
+              <div class="courses__item--button" data-toggle="modal" data-target="#modal-master">
                 <p>УЗНАТЬ ПОДРОБНЕЕ</p>
               </div>
             </div>
@@ -408,26 +410,235 @@
       <p class="footer__copyright">© 2020 Makeup by Vinogradova</p>
     </footer>
     
-    <div class="copyright">
-      <div class="copyright__layout"></div>
-      <div class="copyright__container">
-        <div class="copyright__window">
-          <div class="copyright__window--close">
+    <div class="calendar">
+      <div class="calendar__layout"></div>
+      <div class="calendar__container">
+        <div class="calendar__window">
+          <div class="calendar__window--close">
             <img src="img/icon/notify-close.png" alt="Закрыть модальное окно">
           </div>
-          <div class="copyright__window--tpl">
-            <div class="copyright__window--content">
-              <div class="copyright__window--text">
-                <p>ООО «ЭлЭф Академия» предоставляет авторам техническую возможность размещения информации на Информационном юридическом портале и не участвует в формировании ее содержания, в связи с этим не несет ответственность за законность их действий и информацию, размещаемую авторами на данном Информационном портале, не гарантирует качество, полноту и достоверность такой информации.</p> 
-                <p>Авторы самостоятельно несут ответственность за содержание размещаемой ими информации и законность собственных действий в связи с размещением информации на Информационном портале, вне зависимости от того, какое количество пользователей LF Академии либо третьих лиц получило или могло получить доступ к такой информации.</p>
-                <p>ООО «ЭлЭф Академия», до тех пор, пока не будет установлено иное, предполагает, что все права (имущественного и неимущественного характера) на информацию принадлежат разместившему ее на Информационном портале автору или автором получены все необходимые права и/или разрешения на такое размещение; размещение такой информации на Информационном портале не нарушает законные права и интересы третьих лиц. Если размещение какой-либо информации нарушает законные права и интересы третьих лиц, такая информация будет удалена с Информационного портала по первому требованию правообладателя и/или лица, чьи законные права и интересы были нарушены.</p>
-                <strong>Претензии, касающиеся информации, размещенной на Информационном портале, могут быть отправлены:</strong>
-              </div>
-              <div class="copyright__window--feedback">
-                <a href="#" class="copyright__window--button">Обратная связь</a>
-                <a href="mailto:info@lfacademy.ru" class="copyright__window--email">info@lfacademy.ru</a>
+          <div class="calendar__window--tpl">
+            <div class="calendar__content">
+              <h3 class="calendar__title">Выберите желаемую дату</h3>
+              <div class="calendar__content--wrapper">
+                <div class="calendar__item">
+                  <div class="calendar__item--date"></div>
+                </div>
+                <div class="calendar__form">
+                  <form method="post" action="" name="first-step" class="calendar__form--item" id="first-step">
+                    <div class="calendar__form--group">
+                      <input class="calendar__form--input calendar__form--name" type="text" name="name"
+                        placeholder="ФИО" id="calendar__calendar__form--name" minlength="1" required />
+                      <label for="calendar__form--name">Введите ваше ФИО</label>
+                    </div>
+                    <div class="calendar__form--group">
+                      <input class="calendar__form--input calendar__form--tel" type="text" name="tel"
+                        placeholder="Телефон" id="calendar__form--tel" minlength="1" required />
+                      <label for="calendar__form--tel">Введите ваш телефон</label>
+                    </div>
+                    <div class="calendar__form--group">
+                      <input class="calendar__form--input calendar__form--email" type="text" name="email"
+                        placeholder="E-mail" id="calendar__form--email" minlength="1" required />
+                      <label for="calendar__form--email">Введите ваш E-mail</label>
+                    </div>
+                    <div class="calendar__form--checkbox-wrapper">
+                      <label for="subscribe--Checkbox" class="calendar__form--label">
+                        <input type="checkbox" class="calendar__form--checkbox" name="agree" id="subscribe--Checkbox"
+                          checked required="">
+                        <span class="calendar__form--checkmark"></span>
+                        Добавить мой e - mail в рассылку
+                        интернет - магазина
+                        <a href="https://www.coolmakeup.ru/">www.coolmakeup.ru</a>
+                        (рассылка не чаще 1 раза в неделю)</label>
+                    </div>
+                    <div class="calendar__form--checkbox-wrapper">
+                      <label for="personal--Checkbox" class="calendar__form--label">
+                        <input type="checkbox" class="calendar__form--checkbox" name="agree" id="personal--Checkbox"
+                          checked required="">
+                        <span class="calendar__form--checkmark"></span>
+                        Я даю согласие на обработку своих
+                        персональных данных на условиях,
+                        указанных в <a href="#">пользовательском
+                        соглашении</a></label>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LeIfeIUAAAAACJVhYNLrEiKtgnj2ttXrHKPR4WD"></div>
+                    <div class="text-danger" id="recaptchaError"></div>
+                    <input type="button" name="next" class="calendar__form--button" id="first-submit" value="Записаться"
+                      disabled="true" />
+                  </form>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-yourself" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn btn-default btn-cancel modal__close" data-dismiss="modal">
+            <img src="img/icon/notify-close.png" alt="Закрыть модальное окно">
+          </button>
+          <div class="modal__name">
+            <p>«Макияж для себя»</p>
+          </div>
+          <div class="modal__description">
+            <p>Курс «Макияж для себя» разработан для женщин, которые не умеют делать макияж, но хотят научиться. И не
+            важно, вам 16 или 56. Занятия проходят в группах до 5 человек. Курс включает 4 занятия. Занятия длятся 1,5 - 2
+            часа. Стоимость обучения <strong>15000 руб</strong>.</p> 
+            <p>Как проходит обучение. На первом занятии разбираем вашу косметичку, я
+            читаю теоретическую лекцию о цветах и их сочетании, подготовке кожи к макияжу, косметике и кистях. Разбираем
+            ваш цветотип, форму лица и тип кожи. На следующих занятиях вы учитесь делать себе макияж под моим
+            руководством. На одной стороне вашего лица я показываю как делать макияж, на второй стороне лица вы
+            повторяете, если что-то не получается, я корректирую и озвучиваю ваши ошибки. В процессе обучения вы
+            пользуетесь разными марками косметиками (и люксовыми, и массмаркетом, и профессиональными). Чтоб вы могли
+            попробовать новую для себя косметику и сформировать ассортимент вашей косметички, который подойдет именно
+            вам. По итогу обучения вы будете уметь подбирать цвета и текстуры косметики, которая будет подходить именно
+            вам.</p> 
+            <p>Вы будете покупать косметику и кисти, которыми будете знать как пользоваться. Больше не будете тратить
+            деньги на ненужную косметику, так как у вас сложится четкое понимание что вам подходит, а что нет. Вы будете
+            уметь делать макияж по трем схемам успешно комбинируя цвета в макияже.</p>
+          </div>
+          <div class="formats__table">
+            <table>
+              <tbody>
+                <tr class="formats__table--row">
+                  <th class="formats__table--header">Наименование</th>
+                  <th class="formats__table--header">Индивидуал</th>
+                  <th class="formats__table--header">В группе</th>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Цена 1 занятия</td>
+                  <td class="formats__table--column">3000 р.</td>
+                  <td class="formats__table--column">2000 р.</td>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Кол-во участников</td>
+                  <td class="formats__table--column">1</td>
+                  <td class="formats__table--column">2-5</td>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Разбор косметички</td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Обсуждение теории</td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Рабочая тетрадь</td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Кол-во занятий</td>
+                  <td class="formats__table--column">Зависит от Ваших потребностей</td>
+                  <td class="formats__table--column">4</td>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Длительность занятий</td>
+                  <td class="formats__table--column">1-е занятие 3 часа, последующие 2</td>
+                  <td class="formats__table--column">1-е занятие 3 часа, последующие 2,5</td>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Подбор макияжей под Вашу внешность</td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                </tr>
+                <tr class="formats__table--row">
+                  <td class="formats__table--column formats__table--title">Индивидуальный подбор косметики для Вас</td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                  <td class="formats__table--column"><img src="img/icon/list_done.png" class="formats__table--icon"
+                      alt="Включено в программу"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal__description">Не закрывайте это окно! Подождите 2-5 секунд и сайт перекинет вас на банковскую
+            платежную систему</div>
+          <div class="modal__button--wrapper">
+             <a href="#" class="modal__button modal__button--course" data-dismiss="modal">ЗАПИСАТЬСЯ НА КУРС</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-marathon" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn btn-default btn-cancel modal__close" data-dismiss="modal">
+            <img src="img/icon/notify-close.png" alt="Закрыть модальное окно">
+          </button>
+          <div class="modal__name">
+            <p>«Макияжный марафон»</p>
+          </div>
+          <div class="modal__description">
+            <p>«Макияжных марафон» Дата ближайшего марафона … В рамках «Макияжных марафонов» участники делать макияжи по
+            программе марафона адаптируя их под свою внешность.</p> 
+            <p>В программу марафона входят:</p>
+              <ol>
+                <li>естественный макияж «Макияж без макияжа»;</li>
+                <li>дневной макияж для работы или учебы;</li> 
+                <li>вечерний макияж с акцентом на глаза;</li> 
+                <li>макияж с детальной проработкой кожи и яркими губами.</li> 
+              </ol>
+            <p>Стоимость участия в марафоне <strong>1490 руб</strong>. Цель марафон: научиться
+            делать макияж, подобрать косметику которая подходит именно вам и побороться за главный приз - набор косметики
+            стоимостью 20 тыс. руб.</p> 
+            <p>После регистрации и оплаты, на вашу почту (которую вы укажите при регистрации) будут
+            приходить ссылки на вебинарную комнату за 1 час до начала занятий. Будет создан чат участников марафона, в
+            котором вам дополнительно будут напоминать о вебинарах. Задания я буду выкладывать 1 раз в 3 дня. У участников
+            марафона будет трое суток, чтоб выполнить задание. На 12й день марафон завершится и будет запущено голосование
+            за участниц, которые выложили все 4 макияжа в своих аккаунтах инстаграм отметив публикации необходимым хештегом
+            (хештег будет указан в чате участников марафона).</p> 
+            <p>Доступ к записям марафона будет доступен в течении 30 дней
+            начиная с первого дня марафона. По итогу прохождения марафона, я лично выберу лучшие работы 10 участниц. Выкложу
+            пост-галерею в инстаграм <a href="https://www.instagram.com/coolmakeup.ru/">@coolmakeup.ru</a> и объявлю голосование в комментариях под постом. Участница, набравшая
+            наибольшее количество голосов, выиграет набор косметики на сумму 25 тыс. руб. Дата ближайшего марафона …
+            Зарегистрироваться и оплатить участие в марафоне можно кликнув по кнопке «Оплатить участие в марафоне»</p>
+            <p>Не закрывайте это окно! Подождите 2-5 секунд и сайт перекинет вас на банковскую
+            платежную систему</p>
+          </div>
+          <div class="modal__button--wrapper">
+            <a href="#" class="modal__button" data-dismiss="modal">Оплатить участие в марафоне</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-master" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn btn-default btn-cancel modal__close" data-dismiss="modal">
+            <img src="img/icon/notify-close.png" alt="Закрыть модальное окно">
+          </button>
+          <div class="modal__name">
+            <p>«Мастер класс»</p>
+          </div>
+          <div class="modal__description">
+            <p>Я провожу мастер-классы на актуальные макияжные темы каждый сезон, то есть 1 раз в 3 месяца. Длительность мастер
+            класса 2,5-3 часа. В течении 1,5-2 часов я создам макияж на лице модели, комментируя каждый этап и косметические
+            продукты. Затем я отвечу на вопросы аудитории о техниках в макияже, о косметике и на любые другие интересующие
+            вопросы. Также процесс создания макияжа будет транслироваться на большой экран.</p> 
+            <p>Ближайший мастер класс состоится
+            17 мая по адресу проспект Соколова, 46 в анти кафе Циферблат, подробности по телефону <a href=tel:+79895112321>+7(989)511-23-21</a>.
+            Стоимость посещения мастер класса 990 руб + посещение антикафе (первые 2 часа 3 руб./мин., 4 часа и более 480
+            руб., сюда входят напитки и печеньки в безлимитном количестве). Записаться на мастер класс и оплатить участие
+            можно кликнув на кнопку "Оплата".</p>
+            <p>Не закрывайте это окно! Подождите 2-5 секунд и сайт перекинет вас на банковскую
+            платежную систему</p>
+          </div>
+          <div class="modal__button--wrapper">
+            <a href="#" class="modal__button" data-dismiss="modal">Оплата</a>
           </div>
         </div>
       </div>
@@ -438,6 +649,9 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
     <script src="js/main.js"></script>
-    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
   </body>
 </html>

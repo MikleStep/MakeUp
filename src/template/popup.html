@@ -1,21 +1,60 @@
-<div class="copyright">
-  <div class="copyright__layout"></div>
-  <div class="copyright__container">
-    <div class="copyright__window">
-      <div class="copyright__window--close">
+<div class="calendar">
+  <div class="calendar__layout"></div>
+  <div class="calendar__container">
+    <div class="calendar__window">
+      <div class="calendar__window--close">
         <img src="img/icon/notify-close.png" alt="Закрыть модальное окно">
       </div>
-      <div class="copyright__window--tpl">
-        <div class="copyright__window--content">
-          <div class="copyright__window--text">
-            <p>ООО «ЭлЭф Академия» предоставляет авторам техническую возможность размещения информации на Информационном юридическом портале и не участвует в формировании ее содержания, в связи с этим не несет ответственность за законность их действий и информацию, размещаемую авторами на данном Информационном портале, не гарантирует качество, полноту и достоверность такой информации.</p> 
-            <p>Авторы самостоятельно несут ответственность за содержание размещаемой ими информации и законность собственных действий в связи с размещением информации на Информационном портале, вне зависимости от того, какое количество пользователей LF Академии либо третьих лиц получило или могло получить доступ к такой информации.</p>
-            <p>ООО «ЭлЭф Академия», до тех пор, пока не будет установлено иное, предполагает, что все права (имущественного и неимущественного характера) на информацию принадлежат разместившему ее на Информационном портале автору или автором получены все необходимые права и/или разрешения на такое размещение; размещение такой информации на Информационном портале не нарушает законные права и интересы третьих лиц. Если размещение какой-либо информации нарушает законные права и интересы третьих лиц, такая информация будет удалена с Информационного портала по первому требованию правообладателя и/или лица, чьи законные права и интересы были нарушены.</p>
-            <strong>Претензии, касающиеся информации, размещенной на Информационном портале, могут быть отправлены:</strong>
-          </div>
-          <div class="copyright__window--feedback">
-            <a href="#" class="copyright__window--button">Обратная связь</a>
-            <a href="mailto:info@lfacademy.ru" class="copyright__window--email">info@lfacademy.ru</a>
+      <div class="calendar__window--tpl">
+        <div class="calendar__content">
+          <h3 class="calendar__title">Выберите желаемую дату</h3>
+          <div class="calendar__content--wrapper">
+            <div class="calendar__item">
+              <div class="calendar__item--date"></div>
+            </div>
+            <div class="calendar__form">
+              <form method="post" action="" name="first-step" class="calendar__form--item" id="first-step">
+                <div class="calendar__form--group">
+                  <input class="calendar__form--input calendar__form--name" type="text" name="name"
+                    placeholder="ФИО" id="calendar__calendar__form--name" minlength="1" required />
+                  <label for="calendar__form--name">Введите ваше ФИО</label>
+                </div>
+                <div class="calendar__form--group">
+                  <input class="calendar__form--input calendar__form--tel" type="text" name="tel"
+                    placeholder="Телефон" id="calendar__form--tel" minlength="1" required />
+                  <label for="calendar__form--tel">Введите ваш телефон</label>
+                </div>
+                <div class="calendar__form--group">
+                  <input class="calendar__form--input calendar__form--email" type="text" name="email"
+                    placeholder="E-mail" id="calendar__form--email" minlength="1" required />
+                  <label for="calendar__form--email">Введите ваш E-mail</label>
+                </div>
+                <div class="calendar__form--checkbox-wrapper">
+                  <label for="subscribe--Checkbox" class="calendar__form--label">
+                    <input type="checkbox" class="calendar__form--checkbox" name="agree" id="subscribe--Checkbox"
+                      checked required="">
+                    <span class="calendar__form--checkmark"></span>
+                    Добавить мой e - mail в рассылку
+                    интернет - магазина
+                    <a href="https://www.coolmakeup.ru/">www.coolmakeup.ru</a>
+                    (рассылка не чаще 1 раза в неделю)</label>
+                </div>
+                <div class="calendar__form--checkbox-wrapper">
+                  <label for="personal--Checkbox" class="calendar__form--label">
+                    <input type="checkbox" class="calendar__form--checkbox" name="agree" id="personal--Checkbox"
+                      checked required="">
+                    <span class="calendar__form--checkmark"></span>
+                    Я даю согласие на обработку своих
+                    персональных данных на условиях,
+                    указанных в <a href="#">пользовательском
+                    соглашении</a></label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LeIfeIUAAAAACJVhYNLrEiKtgnj2ttXrHKPR4WD"></div>
+                <div class="text-danger" id="recaptchaError"></div>
+                <input type="button" name="next" class="calendar__form--button" id="first-submit" value="Записаться"
+                  disabled="true" />
+              </form>
+            </div>
           </div>
         </div>
       </div>

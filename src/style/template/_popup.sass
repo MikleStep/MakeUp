@@ -1,7 +1,7 @@
 .with--no_scroll
   overflow: hidden
   margin-right: 17px
-.copyright
+.calendar
   display: block
   &__container
     position: fixed
@@ -19,7 +19,8 @@
     &--shown
       visibility: visible
       overflow-y: scroll
-      .copyright__window
+      background-color: rgba(0, 0, 0, 0.5)
+      .calendar__window
         transition: all 300ms cubic-bezier(.2,0,.2,1),visibility 0ms 0ms
         visibility: visible
         transform: translateY(0)
@@ -28,11 +29,12 @@
     position: fixed
     left: 0
     top: 0
-    width: 100%w
+    width: 100%
     height: 100%
     opacity: 0
     z-index: 1000
     visibility: hidden
+    
     transition: opacity 300ms cubic-bezier(.2,0,.2,1),visibility 0ms 300ms
     will-change: top
     &--shown
@@ -41,7 +43,6 @@
   &__window
     pointer-events: auto
     position: relative
-    min-width: 180px
     display: inline-block
     vertical-align: middle
     opacity: 0
@@ -50,17 +51,16 @@
     transition: all 300ms cubic-bezier(.2,0,.2,1),visibility 0ms 300ms
     margin: 0 auto
     z-index: 1001
-    box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.25)
     &--close
       display: block
       position: absolute
-      width: 28px
-      height: 28px
+      width: 25px
+      height: 25px
       line-height: 30px
       color: #818181
       cursor: pointer
-      right: 0
-      top: 6px
+      right: 50px
+      top: 50px
       font-size: 28px
     &--tpl
       margin-top: 0
@@ -69,112 +69,160 @@
       display: flex
       min-height: 350px
       background-color: $white
-      border-top: 6px solid #D5AD5D
       text-align: left
       border-radius: 2px
       flex-direction: column
-      max-width: 960px
+      width: 100%
       -ms-flex-negative: 0
       flex-shrink: 0
       padding-top: 50px
-      padding-right: 55px
-      padding-left: 55px
-      padding-bottom: 40px
+      padding-right: 50px
+      padding-left: 50px
+      padding-bottom: 50px
       overflow: hidden
-    &--text
-      font-size: 12px
-      line-height: 1.2
-      font-family: 'Open Sans'
-      margin-bottom: 30px
-      p
-        margin-bottom: 20px
-    &--feedback
+  &__content
+    &--wrapper
       display: flex
-      align-items: center
-    &--button
+      justify-content: space-between
+  &__title
+    font-size: 5rem
+    line-height: 1.2
+    font-family: $centuryRegular
+    font-weight: normal
+    margin-bottom: 50px
+  &__item
+    width: calc(70% - 25px)
+    min-height: 100%
+    background-color: #8a8a8a
+    margin-right: 25px
+    &--date
+      background: #a80707
+      width: 100%
+      height: 60px
+  &__form
+    width: 30%
+    padding-top: 60px
+    &--group
       position: relative
-      z-index: 1
-      box-sizing: border-box
-      display: block
-      padding: 15px 14px 
-      border: 1px solid #D5AD5D
-      font-size: 20px
-      color: #D5AD5D
-      text-decoration: none
-      font-weight: 700
-      margin-right: 25px
-      transition: all 300ms ease
-      &:before 
+      label 
         position: absolute
-        content: ''
-        width: 0%
-        height: 100%
-        background: #d5ad5d
-        top: 0
-        left: 50%
-        z-index: -1
-        transition: all 0ms ease 
-      &:hover
-        color: white
-        box-shadow: none
-      &:hover::before
-        position: absolute
-        content: ''
-        width: 100%
-        height: 100%
-        background: #D5AD5D
-        top: 0
+        top: -20px
         left: 0
-        z-index: -1
-        transition: all 300ms ease 
-      &:active
-        &::before
-          background: #be994f
-    &--email
-      position: relative
-      font-style: normal
-      font-weight: bold
-      font-size: 20px
-      text-decoration: none
-      color: #000
-      &::after
-        position: absolute
-        content: ''
+        font-size: 1.2rem
+        font-family: $CenturyRegular
+        opacity: 1
+        transform: translateY(0)
+        transition: all 0.2s ease-out
+      input:placeholder-shown + label 
         opacity: 0
-        bottom: -20px
-        left: 0
-        width: 100%
-        height: 1px
-        background: #D5AD5D
-        transition: all 300ms ease
+        transform: translateY(1rem)
+    a
+      color: #E86556
+    &--input
+      width: 100%
+      margin-bottom: 25px
+      padding-top: 15px
+      padding-right: 30px
+      padding-bottom: 14px
+      padding-left: 30px
+      border: 1px solid #D3DBE8
+      color: $black
+      font-family: $CenturyRegular
+      &::-webkit-input-placeholder 
+        color: #D3DBE8
+    &--checkbox-wrapper
+      position: relative
+      display: block
+      padding-left: 40px
+      cursor: pointer
+      font-size: 1.6rem
+      color: $black
+      font-family: $CenturyRegular
+      margin-bottom: 25px
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      input:checked ~ .calendar__form--checkmark
+        background-image: url('../img/icon/checkbox_check.png')
+        transition: 0.2s
+    &--label
+      cursor: pointer
+    &--checkbox
+      position: absolute
+      opacity: 0
+      cursor: pointer
+    &--checkmark
+      position: absolute
+      top: 0
+      left: 0
+      height: 25px
+      width: 25px
+      background-image: url('../img/icon/checkbox_empty.png')
+      transition: 0.2s
+    &--button
+      width: 100%
+      border: none
+      text-align: center
+      padding-top: 14px
+      padding-bottom: 14px
+      padding-left: 25px
+      padding-right: 25px
+      margin-top: 19px
+      background-color: #E86556
+      color: $white
+      font-size: 1.6rem
+      font-family: $CenturyMedium
+      font-weight: 700
+      cursor: pointer
+      outline: none
+      transition: all 0.2s ease-out
       &:hover
-        &::after
-          opacity: 1
-          bottom: -15px
-          transition: all 300ms ease
+        background-color: #f66b5c
+        transition: all 0.2s ease-out
       &:active
-        color: #333
+        background-color: #d65c4f
+        transition: all 0.1s ease-out
+.g-recaptcha
+  margin-bottom: 25px
+  margin-top: 35px
+  display: flex
+  justify-content: center
 
+@media screen and (max-width: 1100px)
+  .calendar
+    &__title
+      font-size: 4rem
+    &__content--wrapper
+      flex-direction: column
+      align-items: center
+    &__item
+      width: 100%
+      min-height: 500px
+      margin-right: 0
+    &__form
+      width: 100%
+      max-width: 400px
+      
+      
 @media screen and (max-width: 950px)
-  .copyright
+  .calendar
     &__window
       width: 95%
       max-height: 95%
+      &--close
+        top: 30px
+        right: 35px
       &--tpl
-        padding-top: 30px
+        padding-top: 80px
         padding-right: 35px
         padding-left: 35px
         padding-bottom: 20px
-
-@media screen and (max-width: 480px)
-  .copyright
-    &__window
-      &--feedback
-        flex-direction: column  
-      &--button
-        width: 100%
-        margin-bottom: 25px
-        margin-right: 0
-        text-align: center
-      &--email
-        margin-bottom: 10px
+        margin-bottom: 50px
+    &__title
+      font-size: 3rem
+      margin-bottom: 25px
+@media screen and (max-width: 425px)
+  .calendar
+    &__item
+      min-height: 300px

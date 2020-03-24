@@ -72,7 +72,7 @@
     font-family: $CenturyRegular
     line-height: 3rem
     color: $black
-    margin-bottom: 50px
+    margin-bottom: 30px
     p
       margin-bottom: 15px
     ol
@@ -105,12 +105,134 @@
     &:active
       background-color: #d65c4f
       transition: all 0.1s ease-out
+  &__form
+    width: 50%
+    min-width: 300px
+    margin: 0 auto
+    &--group
+      position: relative
+      label 
+        position: absolute
+        top: -20px
+        left: 0
+        font-size: 1.2rem
+        font-family: $CenturyRegular
+        opacity: 1
+        transform: translateY(0)
+        transition: all 0.2s ease-out
+      input:placeholder-shown + label 
+        opacity: 0
+        transform: translateY(1rem)
+    a
+      color: #E86556
+    &--input
+      width: 100%
+      margin-bottom: 25px
+      padding-top: 15px
+      padding-right: 30px
+      padding-bottom: 14px
+      padding-left: 30px
+      border: 1px solid #D3DBE8
+      color: $black
+      font-family: $CenturyRegular
+      font-size: 1.6rem
+      &::-webkit-input-placeholder 
+        color: #D3DBE8
+    &--checkbox-wrapper
+      position: relative
+      display: block
+      padding-left: 40px
+      cursor: pointer
+      font-size: 1.6rem
+      color: $black
+      font-family: $CenturyRegular
+      margin-bottom: 25px
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      input:checked ~ .modal__form--checkmark
+        background-image: url('../img/icon/checkbox_check.png')
+        transition: 0.2s
+    &--label
+      cursor: pointer
+    &--checkbox
+      position: absolute
+      opacity: 0
+      cursor: pointer
+    &--checkmark
+      position: absolute
+      top: 0
+      left: 0
+      height: 25px
+      width: 25px
+      background-image: url('../img/icon/checkbox_empty.png')
+      transition: 0.2s
+    &--button
+      width: 100%
+      border: none
+      text-align: center
+      padding-top: 14px
+      padding-bottom: 14px
+      padding-left: 25px
+      padding-right: 25px
+      margin-top: 19px
+      background-color: #E86556
+      color: $white
+      font-size: 1.6rem
+      font-family: $CenturyMedium
+      font-weight: 700
+      cursor: pointer
+      outline: none
+      transition: all 0.2s ease-out
+      &:hover
+        background-color: #f66b5c
+        transition: all 0.2s ease-out
+      &:active
+        background-color: #d65c4f
+        transition: all 0.1s ease-out
+.g-recaptcha
+  margin-bottom: 25px
+  margin-top: 35px
+  display: flex
+  justify-content: center
   .formats__table
     margin-bottom: 50px
 
+@media screen and (max-width: 1440px)
+  .modal
+    &__form--checkbox-wrapper
+      font-size: 1.4rem
+    &__form--checkmark
+      width: 20px
+      height: 20px
+      background-size: contain
 @media screen and (max-width: 950px)
   .modal-content
     padding-top: 80px
+  .modal-dialog
+    max-width: 500px
   .modal__close
     top: 30px
     right: 35px
+  .modal
+    &__form
+      width: 100%
+      max-width: 400px
+      &--close
+        top: 30px
+        right: 35px
+      &--tpl
+        padding-top: 35px
+        padding-right: 35px
+        padding-left: 35px
+        padding-bottom: 20px
+        margin-bottom: 50px
+    &__title
+      font-size: 3rem
+      margin-bottom: 25px
+      max-width: 70%
+@media screen and (max-width: 425px)
+  .modal
+    &__form
+      min-width: 200px

@@ -567,7 +567,7 @@
           <div class="modal__description">Не закрывайте это окно! Подождите 2-5 секунд и сайт перекинет вас на банковскую
             платежную систему</div>
           <div class="modal__button--wrapper">
-             <a href="#" class="modal__button modal__button--course" data-dismiss="modal">ЗАПИСАТЬСЯ НА КУРС</a>
+             <a href="#modal-course" class="modal__button modal__button--course">ЗАПИСАТЬСЯ НА КУРС</a>
           </div>
         </div>
       </div>
@@ -608,8 +608,49 @@
             <p>Не закрывайте это окно! Подождите 2-5 секунд и сайт перекинет вас на банковскую
             платежную систему</p>
           </div>
-          <div class="modal__button--wrapper">
-            <a href="#" class="modal__button" data-dismiss="modal">Оплатить участие в марафоне</a>
+          <div class="modal__form">
+            <form method="post" action="" name="first-step" class="modal__form--item" id="first-step">
+              <div class="modal__form--group">
+                <input class="modal__form--input modal__form--name" type="text" name="name" placeholder="ФИО"
+                  id="modal__form--name" minlength="1" required />
+                <label for="modal__form--name">Введите ваше ФИО</label>
+              </div>
+              <div class="modal__form--group">
+                <input class="modal__form--input modal__form--tel" type="text" name="tel" placeholder="Телефон"
+                  id="modal__form--tel" minlength="1" required />
+                <label for="modal__form--tel">Введите ваш телефон</label>
+              </div>
+              <div class="modal__form--group">
+                <input class="modal__form--input modal__form--email" type="text" name="email" placeholder="E-mail"
+                  id="modal__form--email" minlength="1" required />
+                <label for="modal__form--email">Введите ваш E-mail</label>
+              </div>
+              <div class="modal__form--checkbox-wrapper">
+                <label for="subscribe--Checkbox" class="modal__form--label">
+                  <input type="checkbox" class="modal__form--checkbox" name="agree" id="subscribe--Checkbox" checked
+                    required="">
+                  <span class="modal__form--checkmark"></span>
+                  Добавить мой e - mail в рассылку
+                  интернет - магазина
+                  <a href="https://www.coolmakeup.ru/">www.coolmakeup.ru</a>
+                  (рассылка не чаще 1 раза в неделю)</label>
+              </div>
+              <div class="modal__form--checkbox-wrapper">
+                <label for="personal--Checkbox" class="modal__form--label">
+                  <input type="checkbox" class="modal__form--checkbox" name="agree" id="personal--Checkbox" checked
+                    required="">
+                  <span class="modal__form--checkmark"></span>
+                  Я даю согласие на обработку своих
+                  персональных данных на условиях,
+                  указанных в <a href="#">пользовательском
+                    соглашении</a></label>
+              </div>
+              <div class="g-recaptcha" data-sitekey="6LeIfeIUAAAAACJVhYNLrEiKtgnj2ttXrHKPR4WD"></div>
+              <div class="text-danger" id="recaptchaError"></div>
+              <input type="button" name="next" class="modal__form--button" id="first-submit"
+                value="Оплатить участие в марафоне"
+                disabled="true" />
+            </form>
           </div>
         </div>
       </div>
@@ -629,15 +670,55 @@
             продукты. Затем я отвечу на вопросы аудитории о техниках в макияже, о косметике и на любые другие интересующие
             вопросы. Также процесс создания макияжа будет транслироваться на большой экран.</p> 
             <p>Ближайший мастер класс состоится
-            17 мая по адресу проспект Соколова, 46 в анти кафе Циферблат, подробности по телефону <a href=tel:+79895112321>+7(989)511-23-21</a>.
+            17 мая по адресу проспект Соколова, 46 в анти кафе Циферблат, подробности по телефону <a href=tel:+79895112321>+7 (989) 511-23-21</a>.
             Стоимость посещения мастер класса 990 руб + посещение антикафе (первые 2 часа 3 руб./мин., 4 часа и более 480
             руб., сюда входят напитки и печеньки в безлимитном количестве). Записаться на мастер класс и оплатить участие
             можно кликнув на кнопку "Оплата".</p>
             <p>Не закрывайте это окно! Подождите 2-5 секунд и сайт перекинет вас на банковскую
             платежную систему</p>
           </div>
-          <div class="modal__button--wrapper">
-            <a href="#" class="modal__button" data-dismiss="modal">Оплата</a>
+          <div class="modal__form">
+            <form method="post" action="" name="first-step" class="modal__form--item" id="first-step">
+              <div class="modal__form--group">
+                <input class="modal__form--input modal__form--name" type="text" name="name" placeholder="ФИО"
+                  id="modal__form--name" minlength="1" required />
+                <label for="modal__form--name">Введите ваше ФИО</label>
+              </div>
+              <div class="modal__form--group">
+                <input class="modal__form--input modal__form--tel" type="text" name="tel" placeholder="Телефон"
+                  id="modal__form--tel" minlength="1" required />
+                <label for="modal__form--tel">Введите ваш телефон</label>
+              </div>
+              <div class="modal__form--group">
+                <input class="modal__form--input modal__form--email" type="text" name="email" placeholder="E-mail"
+                  id="modal__form--email" minlength="1" required />
+                <label for="modal__form--email">Введите ваш E-mail</label>
+              </div>
+              <div class="modal__form--checkbox-wrapper">
+                <label for="subscribe--Checkbox" class="modal__form--label">
+                  <input type="checkbox" class="modal__form--checkbox" name="agree" id="subscribe--Checkbox" checked
+                    required="">
+                  <span class="modal__form--checkmark"></span>
+                  Добавить мой e - mail в рассылку
+                  интернет - магазина
+                  <a href="https://www.coolmakeup.ru/">www.coolmakeup.ru</a>
+                  (рассылка не чаще 1 раза в неделю)</label>
+              </div>
+              <div class="modal__form--checkbox-wrapper">
+                <label for="personal--Checkbox" class="modal__form--label">
+                  <input type="checkbox" class="modal__form--checkbox" name="agree" id="personal--Checkbox" checked
+                    required="">
+                  <span class="modal__form--checkmark"></span>
+                  Я даю согласие на обработку своих
+                  персональных данных на условиях,
+                  указанных в <a href="#">пользовательском
+                    соглашении</a></label>
+              </div>
+              <div class="g-recaptcha" data-sitekey="6LeIfeIUAAAAACJVhYNLrEiKtgnj2ttXrHKPR4WD"></div>
+              <div class="text-danger" id="recaptchaError"></div>
+              <input type="button" name="next" class="modal__form--button" id="first-submit"
+                value="Оплата" disabled="true" />
+            </form>
           </div>
         </div>
       </div>

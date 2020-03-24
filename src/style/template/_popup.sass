@@ -4,7 +4,7 @@
 .calendar
   display: block
   .modal-dialog
-    max-width: 1200px
+    max-width: 1000px
   .modal-content
     padding: 0
   &__container
@@ -81,6 +81,7 @@
       height: 60px
   &__form
     width: 30%
+    min-width: 300px
     padding-top: 60px
     &--group
       position: relative
@@ -108,6 +109,7 @@
       border: 1px solid #D3DBE8
       color: $black
       font-family: $CenturyRegular
+      font-size: 1.6rem
       &::-webkit-input-placeholder 
         color: #D3DBE8
     &--checkbox-wrapper
@@ -180,8 +182,10 @@
       width: 20px
       height: 20px
       background-size: contain
-@media screen and (max-width: 1100px)
+@media screen and (max-width: 950px)
   .calendar
+    .modal-dialog
+      max-width: 500px
     &__content--wrapper
       flex-direction: column
       align-items: center
@@ -192,10 +196,6 @@
     &__form
       width: 100%
       max-width: 400px
-      
-      
-@media screen and (max-width: 950px)
-  .calendar
     &__window
       width: 95%
       max-height: 95%
@@ -216,3 +216,5 @@
   .calendar
     &__item
       min-height: 300px
+    &__form
+      min-width: 200px

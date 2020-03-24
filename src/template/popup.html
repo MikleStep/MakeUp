@@ -1,10 +1,9 @@
-<div class="calendar">
-  <div class="calendar__layout"></div>
-  <div class="calendar__container">
-    <div class="calendar__window">
-      <div class="calendar__window--close">
+<div class="modal calendar fade" id="modal-course" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn btn-default btn-cancel modal__close" data-dismiss="modal">
         <img src="img/icon/notify-close.png" alt="Закрыть модальное окно">
-      </div>
+      </button>
       <div class="calendar__window--tpl">
         <div class="calendar__content">
           <h3 class="calendar__title">Выберите желаемую дату</h3>
@@ -15,13 +14,13 @@
             <div class="calendar__form">
               <form method="post" action="" name="first-step" class="calendar__form--item" id="first-step">
                 <div class="calendar__form--group">
-                  <input class="calendar__form--input calendar__form--name" type="text" name="name"
-                    placeholder="ФИО" id="calendar__calendar__form--name" minlength="1" required />
+                  <input class="calendar__form--input calendar__form--name" type="text" name="name" placeholder="ФИО"
+                    id="calendar__calendar__form--name" minlength="1" required />
                   <label for="calendar__form--name">Введите ваше ФИО</label>
                 </div>
                 <div class="calendar__form--group">
-                  <input class="calendar__form--input calendar__form--tel" type="text" name="tel"
-                    placeholder="Телефон" id="calendar__form--tel" minlength="1" required />
+                  <input class="calendar__form--input calendar__form--tel" type="text" name="tel" placeholder="Телефон"
+                    id="calendar__form--tel" minlength="1" required />
                   <label for="calendar__form--tel">Введите ваш телефон</label>
                 </div>
                 <div class="calendar__form--group">
@@ -41,13 +40,13 @@
                 </div>
                 <div class="calendar__form--checkbox-wrapper">
                   <label for="personal--Checkbox" class="calendar__form--label">
-                    <input type="checkbox" class="calendar__form--checkbox" name="agree" id="personal--Checkbox"
-                      checked required="">
+                    <input type="checkbox" class="calendar__form--checkbox" name="agree" id="personal--Checkbox" checked
+                      required="">
                     <span class="calendar__form--checkmark"></span>
                     Я даю согласие на обработку своих
                     персональных данных на условиях,
                     указанных в <a href="#">пользовательском
-                    соглашении</a></label>
+                      соглашении</a></label>
                 </div>
                 <div class="g-recaptcha" data-sitekey="6LeIfeIUAAAAACJVhYNLrEiKtgnj2ttXrHKPR4WD"></div>
                 <div class="text-danger" id="recaptchaError"></div>

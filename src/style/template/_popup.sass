@@ -3,6 +3,8 @@
   margin-right: 17px
 .calendar
   display: block
+  .modal-dialog
+    max-width: 1200px
   &__container
     position: fixed
     display: flex
@@ -16,30 +18,6 @@
     z-index: 1001
     visibility: hidden
     overflow: hidden
-    &--shown
-      visibility: visible
-      overflow-y: scroll
-      background-color: rgba(0, 0, 0, 0.5)
-      .calendar__window
-        transition: all 300ms cubic-bezier(.2,0,.2,1),visibility 0ms 0ms
-        visibility: visible
-        transform: translateY(0)
-        opacity: 1
-  &__layout
-    position: fixed
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
-    opacity: 0
-    z-index: 1000
-    visibility: hidden
-    
-    transition: opacity 300ms cubic-bezier(.2,0,.2,1),visibility 0ms 300ms
-    will-change: top
-    &--shown
-      visibility: visible
-      transition: opacity 300ms cubic-bezier(.2,0,.2,1),visibility 0ms 0ms
   &__window
     pointer-events: auto
     position: relative

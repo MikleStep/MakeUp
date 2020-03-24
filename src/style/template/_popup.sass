@@ -5,6 +5,8 @@
   display: block
   .modal-dialog
     max-width: 1200px
+  .modal-content
+    padding: 0
   &__container
     position: fixed
     display: flex
@@ -167,10 +169,19 @@
   display: flex
   justify-content: center
 
-@media screen and (max-width: 1100px)
+@media screen and (max-width: 1440px)
   .calendar
     &__title
       font-size: 4rem
+      margin-bottom: 30px
+    &__form--checkbox-wrapper
+      font-size: 1.4rem
+    &__form--checkmark
+      width: 20px
+      height: 20px
+      background-size: contain
+@media screen and (max-width: 1100px)
+  .calendar
     &__content--wrapper
       flex-direction: column
       align-items: center
